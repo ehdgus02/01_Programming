@@ -1,0 +1,95 @@
+var a = 10;
+var b = 3;
+
+console.log("---- 산술 연산자 ----")
+
+console.log("a + b =", a + b);   // 덧셈
+console.log("a - b =", a - b);   // 뺄셈
+console.log("a * b =", a * b);   // 곱셉
+console.log("a / b =", a / b);   // 나눗셈
+console.log("a % b =", a % b);   // 나머지
+console.log("a ** b =", a ** b); // 거듭제곱
+
+console.log(`a % b = ${a % b}`);
+
+console.log("---- 비교 연산자 ----");
+
+console.log("---- 증감 연산자 예제 ----")
+
+var x = 5;
+console.log("x =", x);                        // 5
+
+console.log("x++ =", x++); // 출력 후 1 증가   // 5
+console.log("x =", x);                        // 6
+
+console.log("++x =", ++x); // 1 증가 후 출력   // 7
+console.log("x =", x);                       // 7
+
+console.log("x-- =", x--); // 출력 후 1 감소  // 7
+console.log("x =", x);                      // 6
+
+console.log("--x =", --x); // 1 감소 후 출력  // 5
+console.log("x =", x);                      // 5
+
+var num1;
+num1 = 10;         // "=" 은 할당 연산자
+
+num1 += 5;         // num1 = num1 + 5; 이걸 줄여서 썻을 뿐
+num1 -= 5;         // num1 = num1 - 5; 이걸 줄여서 썻을 뿐
+
+
+var num2 = 1;
+var bool1 = true;
+
+console.log(num2 == bool1);     // 1 == true     // == 는 값만 비교
+console.log(num2 === bool1);    // 1 === true    // === 는 값과 타입이 같은지 비교
+
+// 삼함 연산자 !!!!!!!!!!
+// 사용법 : 조건식 ? 참일 때 실행되는 코드 : 거짓일 때 실행되는 코드
+//         조건식 -> 비교 연산자를 사용한 '식'이 써져야 함 -> 결과가 true, false로 나오는 식
+
+var result = num2 === bool1 ? "같다" : "다르다";
+console.log(result);
+
+var year = 1985;
+var result2 = year <= 1980 ? "1980 이전" : "1980 이후";
+console.log(result2);
+
+var result3 = 1 ? 2 : 1;      // 0, null, undefined 은 false가 나옴
+console.log(result3);
+
+// 논리합 ( || ) => 둘 중에 하나라도 true면 true
+var loginUser = "admin";
+var gender = "male";
+
+var result4 = loginUser === "admin" || gender === "female";
+
+
+
+// 논리곱 ( && ) => 둘 다 true여야 true
+var result5 = loginUser === "admin" && gender === "female";
+
+
+// 부정 연산사 (!)
+
+var result6 = !true;        // false
+var result7 = !false;       // true
+var result8 = !(loginUser === "admin")    // false
+var result9 = !loginUser;   // false
+var result10 = !!loginUser; // true     ==> 값이 있는지 없는지 판별
+
+
+// typeof 연산사 => 데이터 타입을 문자열로 반환
+console.log(typeof result2);
+
+
+if (typeof x === "number") {
+    x++;
+}
+console.log(x);
+
+var eee = typeof x === "number" ? x++ : x;
+console.log(eee);
+
+
+var type = typeof x;        // "number"
